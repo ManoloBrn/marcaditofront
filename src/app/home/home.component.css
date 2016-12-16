@@ -1,11 +1,5 @@
-img {
-    display: block;
-    margin: auto;
+table, th, td {
+    border: 0px;
+ 
 }
 
-.bienvenida {
-	font-family: 'Pacifico', cursive;
-    font-size: 60px;
-    text-align: center;
-
-}

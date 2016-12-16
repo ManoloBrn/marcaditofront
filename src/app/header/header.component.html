@@ -1,62 +1,19 @@
-    <nav class="navbar navbar-default">
-    <div class="container-field">
-        <!-- Header -->
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#topNavBar">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" [routerLink]="['']">Mercadito</a>
-        </div>
-
-        <!-- Items -->
-        <div class="collapse navbar-collapse" id="topNavBar">
-            <ul class="nav navbar-nav">
-
-                <li class="">
-                    <a [routerLink]="['producto']">
-                        <span class="glyphicon glyphicon-th-large" aria-hidden="true"></span>&nbsp; Producto
-                    </a>
-                </li>
-
-                <li class="">
-                    <a [routerLink]="['listadeproductos']">
-                        <span class="glyphicon glyphicon-th-list" aria-hidden="true"></span>&nbsp; Lista de Productos
-                    </a>
-                </li>
-                <li class="">
-                    <a [routerLink]="['mapa']">
-                        <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>&nbsp; Alrededor mio
-                    </a>
-                </li>
-
-
-            </ul>
-
-            <form class="navbar-form navbar-left" role="search" method="get" action="#">
-                <div class="form-group">
-                    <input type="text" class="form-control" name="q" value="">
-                </div>
-                <button type="submit" class="btn btn-default">Buscar Producto</button>
-            </form>
-
-            <ul class="nav navbar-nav navbar-right">
-                <li class="">
-                    <a href="#">
-                        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>&nbsp; Vender
-                    </a>
-                </li>
-
-
-            <li class="">
-                    <a href="#">
-                        <span class="glyphicon glyphicon-off" aria-hidden="true"></span>&nbsp; Logout
-                    </a>
-            </li>
-            </ul>
-
-        </div>
-
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#!" class="brand-logo">Logo</a>
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a [routerLink]="['']">Mercadito</a></li>
+        <li><a [routerLink]="['producto']">Producto</a></li>
+        <li><a [routerLink]="['listadeproductos']">Lista de Productos</a></li>
+        <li> <a [routerLink]="['mapa']">Alrededor mio</a></li>
+      </ul>
+      <ul class="side-nav" id="mobile-demo">
+        <li><a href="sass.html">Sass</a></li>
+        <li><a href="badges.html">Components</a></li>
+        <li><a href="collapsible.html">Javascript</a></li>
+        <li><a href="mobile.html">Mobile</a></li>
+      </ul>
     </div>
-</nav>
+  </nav>
+             
