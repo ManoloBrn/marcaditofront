@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Response } from "@angular/http";
+import { HttpService } from "../http.service";
 
 @Component({
   selector: 'app-producto',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductoComponent implements OnInit {
 
-  constructor() { }
+  constructor(private httpService: HttpService) { }
 
   ngOnInit() {
+    this.httpService.getData()
+    .subscribe();
   }
+
+
 
 }

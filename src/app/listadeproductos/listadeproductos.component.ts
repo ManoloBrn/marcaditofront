@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Response } from "@angular/http";
+import { HttpService } from "../http.service";
 
 @Component({
   selector: 'app-listadeproductos',
@@ -7,9 +9,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListadeproductosComponent implements OnInit {
 
-  constructor() { }
+  items: any[] = [];
+
+
+  constructor(private httpService: HttpService) { }
 
   ngOnInit() {
+    this.httpService.getData()
+    .subscribe(
+      data => {
+        const myArray = [];
+        for (let key in data){
+          myArray.push(data[key]);
+        }
+        this.items = myArray;
+      }
+    );
   }
+
 
 }

@@ -12,6 +12,9 @@ import { routing } from "./app.routing";
 import { ListadeproductosComponent } from './listadeproductos/listadeproductos.component';
 import { MapaComponent } from './mapa/mapa.component';
 
+import { HttpService } from "./http.service";
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +22,7 @@ import { MapaComponent } from './mapa/mapa.component';
     ProductoComponent,
     HomeComponent,
     ListadeproductosComponent,
-    MapaComponent
+    MapaComponent,
   ],
   imports: [
     BrowserModule,
@@ -27,7 +30,7 @@ import { MapaComponent } from './mapa/mapa.component';
     HttpModule,
     routing
   ],
-  providers: [],
+  providers: [HttpService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
